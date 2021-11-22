@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Graphics
+namespace Mandelbrot
 {
     partial class Form1
     {

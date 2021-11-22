@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Graphics.Properties {
+namespace Mandelbrot.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

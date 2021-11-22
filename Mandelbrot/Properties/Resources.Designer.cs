@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Graphics.Properties {
+namespace Mandelbrot.Properties {
     using System;
     
     
