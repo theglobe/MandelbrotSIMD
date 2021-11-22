@@ -107,7 +107,7 @@ namespace Mandelbrot
                         var zImag2 = zImag * zImag;
 
                         var countable = Vector.LessThan(zReal2 + zImag2, four);
-                        if (Vector.EqualsAll(countable, Vector<long>.Zero)) goto draw;
+                        if (Vector.EqualsAll(countable, Vector<long>.Zero)) break;
                         count -= (Vector<ulong>) countable;
 
                         var zRealPrev = zReal;
@@ -116,7 +116,6 @@ namespace Mandelbrot
 
                         iteration++;
                     }
-                    draw:
                     count.CopyTo(imageData, yStart + x);
 
                     worldX += pixelToWorldScaleStepVec;
