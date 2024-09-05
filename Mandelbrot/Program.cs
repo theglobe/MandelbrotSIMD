@@ -1,13 +1,12 @@
 ﻿using System;
+using System.Runtime.Versioning;
 using System.Windows.Forms;
 
 namespace Mandelbrot
 {
+    [SupportedOSPlatform("windows")]
     static class Program
     {
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        private static extern bool SetProcessDPIAware();
-
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -15,8 +14,8 @@ namespace Mandelbrot
         static void Main()
         {
             Application.EnableVisualStyles();
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.SetCompatibleTextRenderingDefault(false);
-            SetProcessDPIAware();
 
             Application.Run(new Form1());
         }

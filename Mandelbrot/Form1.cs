@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.Runtime.Versioning;
 using System.Windows.Forms;
 
 namespace Mandelbrot
 {
+    [SupportedOSPlatform("windows")]
     public partial class Form1 : Form
     {
         private readonly List<Scene> _scene = new List<Scene>();

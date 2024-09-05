@@ -5,10 +5,12 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Numerics;
 using System.Runtime.InteropServices;
+using System.Runtime.Versioning;
 using System.Threading.Tasks;
 
 namespace Mandelbrot
 {
+    [SupportedOSPlatform("windows")]
     class MandelbrotGenerator
     {
         //private readonly Color[] palette = new Color[256];
@@ -48,8 +50,8 @@ namespace Mandelbrot
         public Image Generate(out ulong[] imageDataOut, double centerX, double centerY, double pixelToWorldScale, int numIterations)
         {
             var imageData = new ulong[Width * Height];
-            var nThreads = 4;
-            var nThreadsJ = 5;
+            var nThreads = 6;
+            var nThreadsJ = 4;
             var tasks = new List<Task>();
 
             for (var i = 0; i < nThreads; i++)
@@ -77,7 +79,8 @@ namespace Mandelbrot
             imageDataOut = imageData;
             return bitmap;
         }
-        public void Generate(ref ulong[] imageData, double centerX, double centerY, double pixelToWorldScale, int numIterations, int startX, int startY, int endX, int endY)
+
+        private void Generate(ref ulong[] imageData, double centerX, double centerY, double pixelToWorldScale, int numIterations, int startX, int startY, int endX, int endY)
         {
             var worldLeft = centerX - Width  * pixelToWorldScale / 2  + startX * pixelToWorldScale;
             var worldTop = -centerY + Height * pixelToWorldScale / 2 - startY * pixelToWorldScale;

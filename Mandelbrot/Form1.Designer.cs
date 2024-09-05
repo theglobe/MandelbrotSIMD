@@ -50,17 +50,17 @@ namespace Mandelbrot
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1, 1084);
+            this.label1.Location = new System.Drawing.Point(0, 1083);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(78, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1920, 1101);
+            this.ClientSize = new System.Drawing.Size(1920, 1124);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbCanvas);
             this.Margin = new System.Windows.Forms.Padding(1);
